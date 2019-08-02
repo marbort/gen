@@ -1,14 +1,11 @@
 Antonietta
-Antonio da Padova
-Antonio Maria Zaccaria
+Agnese
 Barbara
 Bernardetta
 Bianca
 Bibiana
-Bonaventura
 Brigida
 Camilla
-Carlo Luanga
 Caterina d'Alessandria
 Caterina da Genova
 Caterina da Siena
@@ -23,26 +20,17 @@ Emilia
 Emma
 Eva
 Fausta romana
-Felice I papa
 Felicita e Perpetua
 Flora
 Francesca Romana
-Francesco Borgia
-Francesco di Paola
-Gabriele Addolorata
 Genoveffa
 Germana
-Giacomo della Marca
-Giovanni Battista
-Giovanni evangelista
 Giulia
 Giuliana
 Grazia
 Ida
-Ignazio di Antiochia
-Ignazio di Loyola
 Ilaria
-lolanda
+Jolanda
 Irma
 Isabella
 Laura
@@ -51,7 +39,6 @@ Lidia
 Luca
 Lucia
 Luigi Gonzaga
-Luigi Guanella
 Mafalda
 Marcella
 Margherita regina
@@ -74,11 +61,15 @@ Rita da Cascia
 Rosa da Lima
 Rosalia
 Sara
-Sergio I papa
-Silvestro papa
 Silvia
-Sisto III papa
-Stefano d'Ungheria
+Beatrice
+Caterina Labourè
+Edvige
+Francesca Cabrini
+Irene
+Maddalena Alberici
+Teresa del Bambin Gesù
+Veronica Giuliani
 Susanna
 Teodora
 Teresa d'Avila

@@ -1,6 +1,6 @@
 import json
 
-ifile = open ("animali_dict_final","r")
+ifile = open ("santi_ordered.txt","r")
 lines=ifile.read().splitlines() 
 a=[]
 for i in range(1,len(lines)):
@@ -10,7 +10,7 @@ d=dict(zip(a,lines))
 
 
 
-with open('animali.json', 'w') as fp:
+with open('santi.json', 'w') as fp:
     json.dump(d, fp)
 
 

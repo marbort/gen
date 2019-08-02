@@ -109,9 +109,9 @@ class Window(QWidget):
         self.santo_group.addButton(self.Madonna)
         self.santo_group.addButton(self.Santo)
 
-        self.papa=QLabel(self)
+        self.scene = QGraphicsView(self)
         self.pixmap=QPixmap("PAPA.jpg")
-        self.papa.setPixmap(self.pixmap)
+        self.scene.addPixmap(self.pixmap)
 
 
 
@@ -130,7 +130,7 @@ class Window(QWidget):
         grid.addWidget(self.Dio,5,1)
         grid.addWidget(self.Madonna,5,2)
         grid.addWidget(self.Santo,5,3)
-        grid.addWidget(self.papa,1,4,3,3)
+        grid.addWidget(self.scene,1,4,3,3)
         grid.addWidget(self.draw,6,4,1,3)
         self.setLayout(grid)
         #grid.setAlignment(QtCore.Qt.AlignCenter)
@@ -138,9 +138,12 @@ class Window(QWidget):
 
         with open('animali.json', 'r') as f:
            self.animal_dict = json.load(f)
+        with open('santi.json', 'r') as f:
+            self.santi_dict = json.load(f)
 
         self.spin.clicked.connect(self.change_value)
         self.draw.clicked.connect(self.onClicked)
+        self.animale="None"
 
     def dialer_changed(self):
         getValue = self.dial.value()
@@ -154,13 +157,25 @@ class Window(QWidget):
            self.dial.setValue(caso)
     def onClicked(self):
         self.flag = True
+        if self.Santo.isChecked():
+            self.choose_saint()
         #self.papa.setPixmap(self.pixmap)
-        self.update()
+            self.update()
+        else:
+            self.update()
+    def choose_saint(self):
+        num=random.randint(1,285)
+        if num <= 206:
+          self.saint="San " + self.santi_dict.get(str(num))
+        else:
+          self.saint="Santa " + self.santi_dict.get(str(num))
+
 
     def paintEvent(self, paint_event):
       if self.flag:
         pixmap2=QPixmap("PAPA.jpg")
         painter = QtGui.QPainter()
+        painter2 = QtGui.QPainter()
         painter.begin(pixmap2)
         font = QtGui.QFont()
         font.setPointSize(18)
@@ -170,13 +185,19 @@ class Window(QWidget):
         if self.Dio.isChecked():
            painter.drawText(330, 60, "Dio "+self.animale)
         elif self.Madonna.isChecked():
-            painter.drawText(300, 60, "Madonna " +self.animale)
-        
+            painter.drawText(300, 60, "Madonna " + self.animale)
+        elif self.Santo.isChecked():
+             #206 maschi 79 femmine
+            painter.drawText(300, 60, self.saint + "<br>" +  self.animale)
+
+
+
+
         painter.end()
         self.papa.setPixmap(pixmap2)
-        
-       
-           
+
+
+
 
 
 App = QApplication(sys.argv)
