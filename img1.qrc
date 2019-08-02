@@ -1,0 +1,6 @@
+<RCC>
+  <qresource prefix="img1">
+    <file>PAPA.jpg</file>
+  </qresource>
+  <qresource/>
+</RCC>
